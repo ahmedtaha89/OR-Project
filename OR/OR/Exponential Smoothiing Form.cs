@@ -44,31 +44,79 @@ namespace OR
 
             //Error
 
-            double error1 = double.Parse(textBox2.Text) - ex2;
+            double error1 = int.Parse(textBox2.Text) - ex2;
             textBox19.Text = error1.ToString();
 
-            double error2 = double.Parse(textBox3.Text) - ex3;
+            double error2 = int.Parse(textBox3.Text) - ex3;
             textBox18.Text = error2.ToString();
 
 
-            double error3 = double.Parse(textBox4.Text) - ex3;
+            double error3 = int.Parse(textBox4.Text) - ex4;
             textBox10.Text = error3.ToString();
 
-            double error4 = double.Parse(textBox5.Text) - ex4;
+            double error4 = int.Parse(textBox5.Text) - ex5;
             textBox23.Text = error4.ToString();
 
 
 
-            double error5 = double.Parse(textBox6.Text) - ex5;
+            double error5 = int.Parse(textBox6.Text) - ex6;
             textBox22.Text = error5.ToString();
 
 
-            double error6 = double.Parse(textBox7.Text) - ex6;
+            double error6 = int.Parse(textBox7.Text) - ex7;
             textBox21.Text = error6.ToString();
 
 
-            //double error7 = double.Parse(textBox8.Text) - ex7;
-            //textBox20.Text = error7.ToString();
+           // |Error|
+
+            double abs_error1 = Math.Abs(error1);
+            textBox26.Text = abs_error1.ToString();
+
+            double abs_error2 = Math.Abs(error2);
+            textBox25.Text = abs_error2.ToString();
+
+            double abs_error3 = Math.Abs(error3);
+            textBox24.Text = abs_error3.ToString();
+
+            double abs_error4 = Math.Abs(error4);
+            textBox30.Text = abs_error4.ToString();
+
+            double abs_error5 = Math.Abs(error5);
+            textBox29.Text = abs_error5.ToString();
+
+            double abs_error6 = Math.Abs(error6);
+            textBox28.Text = abs_error6.ToString();
+
+
+            // |Error|^2
+
+
+            double sqr_error1 = Math.Pow(error1,2);
+            textBox33.Text = sqr_error1.ToString();
+
+            double sqr_error2 = Math.Pow(error2,2);
+            textBox32.Text = sqr_error2.ToString();
+
+            double sqr_error3 = Math.Pow(error3,2);
+            textBox31.Text = sqr_error3.ToString();
+
+            double sqr_error4 = Math.Pow(error4,2);
+            textBox37.Text = sqr_error4.ToString();
+
+            double sqr_error5 = Math.Pow(error5,2);
+            textBox36.Text = sqr_error5.ToString();
+
+            double sqr_error6 = Math.Pow(error6,2);
+
+            textBox35.Text = sqr_error6.ToString();
+
+            //MSE 
+            double  MAD= (abs_error1 + abs_error2 + abs_error3 + abs_error4 + abs_error5 + abs_error6) /6;
+            textBox16.Text= MAD.ToString();
+
+            // MAD
+            double MSE = (sqr_error1  + sqr_error2 + sqr_error3+ sqr_error4+ sqr_error5 + sqr_error6)/6;
+            textBox20.Text= MSE.ToString();
 
 
         }
@@ -101,7 +149,6 @@ namespace OR
             textBox24.Clear();
             textBox25.Clear();
             textBox26.Clear();
-            textBox27.Clear();
             textBox28.Clear();
             textBox29.Clear();
             textBox30.Clear();
@@ -109,7 +156,12 @@ namespace OR
             textBox32.Clear();
             textBox32.Clear();
             textBox33.Clear();
-            textBox34.Clear();
+            textBox37.Clear();
+            textBox36.Clear();
+            textBox35.Clear();
+
+
+
 
 
 
