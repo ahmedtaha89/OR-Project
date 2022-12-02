@@ -97,7 +97,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(239, 265);
+            this.textBox8.Location = new System.Drawing.Point(239, 253);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 22);
             this.textBox8.TabIndex = 8;
@@ -143,34 +143,37 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(673, 264);
+            this.button3.Location = new System.Drawing.Point(606, 166);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(184, 51);
             this.button3.TabIndex = 14;
-            this.button3.Text = "button3";
+            this.button3.Text = "Exponential Smoothing";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(673, 194);
+            this.button4.Location = new System.Drawing.Point(606, 85);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(182, 58);
             this.button4.TabIndex = 15;
-            this.button4.Text = "button4";
+            this.button4.Text = "Weighted moving average";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(428, 272);
+            this.textBox11.Location = new System.Drawing.Point(413, 254);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(159, 22);
             this.textBox11.TabIndex = 16;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(457, 253);
+            this.label3.Location = new System.Drawing.Point(462, 235);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 17;
@@ -198,6 +201,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

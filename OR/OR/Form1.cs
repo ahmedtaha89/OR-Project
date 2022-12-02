@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OR
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
         public Form1()
         {
@@ -19,19 +19,20 @@ namespace OR
 
         private void button1_Click(object sender, EventArgs e)
         {
-           int sum_x  = int.Parse(textBox1.Text) + int.Parse(textBox2.Text) + int.Parse(textBox3.Text) + int.Parse(textBox4.Text);
+            double sum_x  = (double.Parse(textBox1.Text) + double.Parse(textBox2.Text) + double.Parse(textBox3.Text) + double.Parse(textBox4.Text));
 
-           int sum_y =  (int.Parse(textBox5.Text) + int.Parse(textBox6.Text) + int.Parse(textBox7.Text) + int.Parse(textBox8.Text));
+            double sum_y =  (double.Parse(textBox5.Text) + double.Parse(textBox6.Text) + double.Parse(textBox7.Text) + double.Parse(textBox8.Text));
 
-           int sum_xx = (int.Parse(textBox1.Text)^2 + int.Parse(textBox2.Text)^2 + int.Parse(textBox3.Text)^2 + int.Parse(textBox4.Text)^2);
+           
+            double sum_xx = (Math.Pow(double.Parse(textBox1.Text), 2) + Math.Pow(double.Parse(textBox2.Text), 2) + Math.Pow(double.Parse(textBox3.Text), 2) + Math.Pow(double.Parse(textBox4.Text), 2));
+            
+            double sum_xy = (double.Parse(textBox1.Text) * double.Parse(textBox5.Text)  + double.Parse(textBox2.Text)  * double.Parse(textBox6.Text) + double.Parse(textBox3.Text) * double.Parse(textBox7.Text) + double.Parse(textBox4.Text) * double.Parse(textBox8.Text));
 
-           int sum_xy = (int.Parse(textBox1.Text) * int.Parse(textBox5.Text)  + int.Parse(textBox2.Text)  * int.Parse(textBox6.Text) + int.Parse(textBox3.Text) * int.Parse(textBox7.Text) + int.Parse(textBox4.Text) * int.Parse(textBox8.Text));
+            double a = ((sum_y * sum_xx) - (sum_x * sum_xy)) / ((4*sum_xx) - (Math.Pow(sum_x,2)));
 
-            double a = ((sum_y * sum_xx) - (sum_x * sum_xy) / (4 * sum_xx - sum_x^2));
+            double b = ((4* sum_xy ) - (sum_x * sum_y) ) / ((4*sum_xx) - (sum_xx));
 
-            double b = ((4* sum_xy ) - (sum_x * sum_y) / ( (4*sum_xx) - sum_xx));
-
-            double y = a + b * sum_x;
+            double y = a + b*sum_x;
 
             textBox11.Text = y.ToString();
 
@@ -60,6 +61,16 @@ namespace OR
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Weighted_moving_averageFormcs().ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Exponential_Smoothiing_Form().ShowDialog();
         }
     }
 }
