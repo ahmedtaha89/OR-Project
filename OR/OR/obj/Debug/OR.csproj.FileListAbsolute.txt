@@ -1,0 +1,11 @@
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\bin\Debug\OR.exe.config
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\bin\Debug\OR.exe
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\bin\Debug\OR.pdb
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.Form1.resources
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.Properties.Resources.resources
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.csproj.GenerateResource.cache
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.exe
+C:\Users\HP\OneDrive\Desktop\OR\OR\OR\obj\Debug\OR.pdb
